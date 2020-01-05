@@ -32,6 +32,7 @@ class MusicLibraryController
 
   def list_artists
     index = 1
+    binding.pry
     Artist.all.sort! do |artist1, artist2|
       artist1.name <=> artist2.name
     end
