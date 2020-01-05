@@ -32,11 +32,10 @@ class MusicLibraryController
 
   def list_artists
     index = 1
-    binding.pry
+    Artist.remove_dupes
     Artist.all.sort! do |artist1, artist2|
       artist1.name <=> artist2.name
     end
-    binding.pry
     Artist.all.each do |artist|
       puts "#{index}. #{artist.name}"
       index += 1
