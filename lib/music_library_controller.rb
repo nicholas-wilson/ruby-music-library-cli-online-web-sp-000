@@ -36,6 +36,7 @@ class MusicLibraryController
     Artist.all.sort! do |artist1, artist2|
       artist1.name <=> artist2.name
     end
+    binding.pry
     Artist.all.each do |artist|
       puts "#{index}. #{artist.name}"
       index += 1
