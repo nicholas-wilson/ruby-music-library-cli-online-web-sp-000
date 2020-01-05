@@ -55,6 +55,7 @@ class Artist
     no_dupes = []
     @songs.each do |song|
       if !no_dupes.include?(song)
+        binding.pry
         no_dupes << song
       end
     end
