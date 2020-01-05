@@ -57,12 +57,10 @@ class MusicLibraryController
     input = gets.chomp
     index = 1
     artist = Artist.find_by_name(input)
-    binding.pry
     if artist
       artist.songs.sort! do |song1, song2|
         song1.name <=> song2.name
       end
-      Artist.remove_dupes
       artist.songs.each do |song|
         puts "#{index}. #{song.name} - #{song.genre.name}"
         index += 1
