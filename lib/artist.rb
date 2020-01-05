@@ -53,13 +53,12 @@ class Artist
 
   def self.remove_dupes
     no_dupes = []
-    @songs.each do |song|
-      if !no_dupes.include?(song)
-        binding.pry
-        no_dupes << song
+    @@all.each do |artist|
+      if !no_dupes.include?(artist)
+        no_dupes << artist
       end
     end
-    @songs = no_dupes
+    @@all = no_dupes
   end
 
   def self.all
