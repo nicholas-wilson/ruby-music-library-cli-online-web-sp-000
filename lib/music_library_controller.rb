@@ -18,7 +18,7 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
       input = gets.chomp
-      MusicImporter.run_commands(input)
+      run_commands(input)
     end
   end
 
