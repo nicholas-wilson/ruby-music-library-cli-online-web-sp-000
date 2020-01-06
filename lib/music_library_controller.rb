@@ -98,4 +98,20 @@ class MusicLibraryController
       end
     end
   end
+
+  def run_commands(input_from_user)
+    if input_from_user == "list songs"
+      list_songs
+    elsif input_from_user == "list artists"
+      list_artists
+    elsif input_from_user == "list genres"
+      list_genres
+    elsif input_from_user == "list artist"
+      list_songs_by_artist
+    elsif input_from_user == "list genre"
+      list_songs_by_genre
+    elsif input_from_user == "play song"
+      play_song
+    end
+  end
 end
